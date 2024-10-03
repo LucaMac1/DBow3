@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------
 #   Basic Configuration
 # ----------------------------------------------------------------------------
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -81,7 +81,7 @@ ENDIF()
 #   Uninstall target, for "make uninstall"
 # ----------------------------------------------------------------------------
 CONFIGURE_FILE( "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in" "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake" IMMEDIATE @ONLY)
-ADD_CUSTOM_TARGET(uninstall "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
+ADD_CUSTOM_TARGET(uninstall_dbow3 "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
 
 # ----------------------------------------------------------------------------
 # create configuration file from .in file (If you use windows take care with paths)
